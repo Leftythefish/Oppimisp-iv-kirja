@@ -1,0 +1,117 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+
+namespace Oppimispäiväkirja
+{
+    class Program
+    {
+        static List<string> tallennustiedosto = new List<string>();
+        static List<Topic> Topicbox = new List<Topic>();
+
+        static void Main(string[] args)
+        {
+            LoadAllTopics();
+            Start();
+        }
+
+        private static void LoadAllTopics()
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader(@"C:\Users\riaah\OneDrive\Tiedostot\Oppimispäiväkirja\Topics.txt"))
+                {
+                    string line;
+                    // Read and display lines from the file until the end of 
+                    // the file is reached.
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        tallennustiedosto.Add(line);
+                    }
+                    sr.Dispose();
+                }
+                foreach (var item in tallennustiedosto)
+                {
+                    var topic = new Topic(item);
+                    Topicbox.Add(topic);
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("Tiedostoa ei löydy.");
+            }
+
+
+        }
+
+        private static void Start()
+        {
+            /*string input = Console.ReadLine();
+            args = input.Split(" ");*/
+            Console.WriteLine("VALITSE");
+            Console.WriteLine("[1]\t Lisää aihe \n[2]\t Listaa aiheet\n[3]\t Tallenna sessio\n ");
+            var input = Console.ReadKey();
+
+            #region inputtest
+            if (input.Key == ConsoleKey.D1) { AddNewTopic(); }
+            else if (input.Key == ConsoleKey.D2) { ListAllTopics(); }
+            else if (input.Key == ConsoleKey.D3) { SaveCurrentTopics(); }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Antamasi arvo ei kelpaa.");
+                Start();
+            }
+            #endregion
+        }
+
+        private static void SaveCurrentTopics()
+        {
+            using (StreamWriter sw2 = new StreamWriter(@"C:\Users\riaah\OneDrive\Tiedostot\Oppimispäiväkirja\Topics.txt"))
+            {
+                foreach (var topic in Topicbox)
+                {
+                    sw2.WriteLine(topic.Title);
+                }
+                sw2.Dispose();
+            }
+        }
+
+        private static void ListAllTopics()
+        {
+            Console.Clear();
+            foreach (var a in Topicbox)
+            {
+
+                Console.WriteLine(a.ID + " " + a.Title);
+            }
+            Console.ReadLine();
+            Start();
+        }
+
+        private static void AddNewTopic()
+        {
+            Console.Clear();
+            Console.WriteLine("Lisää aihe muodossa: NIMI");
+            string topicname = Console.ReadLine();
+            Topic aihe = new Topic(topicname);
+            Topicbox.Add(aihe);
+
+            Console.WriteLine("Lisää uusia aiheita y/n");
+            var i2 = Console.ReadKey();
+
+            if (i2.Key == ConsoleKey.Y)
+            {
+                Console.Clear();
+                AddNewTopic();
+            }
+            else
+            {
+                Console.Clear();
+                Start();
+            }
+
+        }
+    }
+}

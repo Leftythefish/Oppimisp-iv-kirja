@@ -1,0 +1,9 @@
+testiaihe;TESTATAAN TESTATAAN;0;0;VILLE KEKSI TÄMÄN;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
+teastiaihe2;testikuvaus 2nen ja katsotaan;0;0;Default tiedostosijainti;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
+testiaihe; ja sitten sen kuvaus;0;0;Default tiedostosijainti;1.1.2019 10.00.00;1.1.2019 10.00.00;Valmis
+lisää  aihe testiin; kuvauskenttätesti;0;0;Default lähde;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
+tämäonmuokattunimi; jotainjotainjotain;0;0;Default lähde;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
+jotainjotain; kuvauskuvaus;0;0;Default lähde;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
+aamuinen aihe; ja sitten pieni kuvaus;1,44;1,44;Default lähde;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
+testiaiheen otsikossa on sanoja;testikuvaus on tässä taas;15,5;15,5;ja tässä on lähdetiedosto;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
+TESTIAIHE;defaultkuvaus;0;0;Default lähde;10.10.2019 11.00.00;28.11.2019 10.00.00;Valmis
