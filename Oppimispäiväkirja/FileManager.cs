@@ -29,10 +29,7 @@ namespace Oppimispäiväkirja
             {
                 Console.WriteLine("Tiedostoa ei löydy.");
             }
-
-
         }
-
 
         public static void FileModifyFields()
         {
@@ -40,8 +37,6 @@ namespace Oppimispäiväkirja
             {
                 string[] om;
                 om = rivi.Split(";");
-                //järjestys on NIMI KUVAUS AIKA-ARVIO, KULUNUT AIKA, LÄHDE 
-                /*UNIMPLEMENTED: DateTime start_date, bool inprogress, DateTime completion_date*/
                 string nimi, kuvaus, source;
                 double time_estimate, time_spent;
                 DateTime startdate, end_date;

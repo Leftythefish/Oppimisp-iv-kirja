@@ -5,7 +5,6 @@ namespace Oppimispäiväkirja
 {
     class TopicHandler
     {
-
         public static void ListAllTopics()
         {
             Console.Clear();
