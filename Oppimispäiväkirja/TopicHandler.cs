@@ -8,31 +8,14 @@ namespace Oppimispäiväkirja
 
         public static void ListAllTopics()
         {
-            string status;
             Console.Clear();
             foreach (var a in Program.Topicbox)
             {
-                Console.WriteLine("----------------");
-                if (a.InProgress == true)
-                {
-                    status = "Kesken";
-                }
-                else
-                {
-                    status = "Valmis";
-                }
-                Console.WriteLine("Status: " + status);
-                Console.WriteLine(a.ID + " " + a.Title + "\nKuvaus:" + a.Description);
-                Console.WriteLine("Arvioitu aika:" + a.TimeEstimate);
-                Console.WriteLine("Käytetty aika:" + a.TimeSpent);
-                Console.WriteLine("Lähde:" + a.Source);
-                Console.WriteLine("Aloitettu:" + a.StartLearningDate.ToString());
-                Console.WriteLine("Valmis:" + a.CompletionDate.ToString());
+                PrintTopic(a);
             }
             Console.ReadLine();
             ConsoleUI.Start();
         }
-
         public static void AddNewTopic()
         {
             string name;
@@ -75,7 +58,6 @@ namespace Oppimispäiväkirja
                 ConsoleUI.Start();
             }
         }
-
         public static void FindTopicToModify()
         {
             Console.Clear();
@@ -86,16 +68,16 @@ namespace Oppimispäiväkirja
             }
             Console.WriteLine("Kirjoita sen aiheen ID jota haluat muokata:");
             string inputline = Console.ReadLine();
-            var select = Program.Topicbox.Where(k => k.ID.Equals(Convert.ToInt32(inputline)));
+            var select = Program.Topicbox.Where(k => k.ID.Equals(Convert.ToInt32(inputline))).First();
 
+            Console.Clear();
+            PrintTopic(select);
+            Console.WriteLine("----------------");
             Console.WriteLine("[1]\t Muokkaa aihetta \n[2]\t Poista aihe\n[3]\t Palaa alkuun\n");
             var input = Console.ReadKey();
             if (input.Key == ConsoleKey.D1)
             {
-                foreach (Topic item in select)
-                {
-                    AddProperties(item);
-                }
+                AddProperties(select);
             }
             else if (input.Key == ConsoleKey.D2)
             {
@@ -114,7 +96,6 @@ namespace Oppimispäiväkirja
                 ConsoleUI.Start();
             }
         }
-
         public static void AddProperties(Topic aihe)
         {
             Console.Clear();
@@ -290,12 +271,31 @@ namespace Oppimispäiväkirja
             }
             finally { AddProperties(aihe); }
         }
-
-        public static void DeleteTopic(Topic item)
+        public static void DeleteTopic(Topic aihe)
         {
-            Program.Topicbox.Remove(item);
+            Program.Topicbox.Remove(aihe);
         }
-
-
+        public static void PrintTopic(Topic aihe)
+        {
+            string status;
+            Console.WriteLine("----------------");
+            if (aihe.InProgress == true)
+            {
+                status = "Kesken";
+            }
+            else
+            {
+                status = "Valmis";
+            }
+            Console.WriteLine(aihe.ID + " " + aihe.Title);
+            Console.WriteLine("----------------");
+            Console.WriteLine("Status: " + status);
+            Console.WriteLine("Kuvaus:\n" + aihe.Description);
+            Console.WriteLine("Arvioitu aika: " + aihe.TimeEstimate);
+            Console.WriteLine("Käytetty aika: " + aihe.TimeSpent);
+            Console.WriteLine("Lähde: " + aihe.Source);
+            Console.WriteLine("Aloitettu: " + aihe.StartLearningDate.ToString("dd/MM/yyyy"));
+            Console.WriteLine("Valmis: " + aihe.CompletionDate.ToString("dd/MM/yyyy"));
+        }
     }
 }
