@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace Oppimispäiväkirja
@@ -150,7 +148,7 @@ namespace Oppimispäiväkirja
         }
         public static void EditPropertyName(Topic aihe)
         {
-            string e_name = "";
+            string e_name;
             Console.Clear();
             Console.WriteLine($"Nimi nyt: {aihe.Title}");
             Console.WriteLine("Uusi nimi:");
@@ -160,7 +158,7 @@ namespace Oppimispäiväkirja
         }
         public static void EditPropertyDescription(Topic aihe)
         {
-            string e_description = "";
+            string e_description;
             Console.Clear();
             Console.WriteLine($"Kuvaus nyt: {aihe.Description}");
             Console.WriteLine("Uusi kuvaus:");
@@ -170,7 +168,7 @@ namespace Oppimispäiväkirja
         }
         public static void EditPropertyTimeEst(Topic aihe)
         {
-            double e_time_estimate = 0.0;
+            double e_time_estimate;
             Console.Clear();
             Console.WriteLine($"Arvioitu kesto nyt: {aihe.TimeEstimate}");
             Console.WriteLine("Anna uusi arvioitu kesto muodossa 00,00:");
@@ -189,7 +187,7 @@ namespace Oppimispäiväkirja
         }
         public static void EditPropertyTimeSpent(Topic aihe)
         {
-            double e_time_spent = 0.0;
+            double e_time_spent;
             Console.Clear();
             Console.WriteLine($"Arvioitu kesto nyt: {aihe.TimeSpent}");
             Console.WriteLine("Uusi arvioitu kesto muodossa 00,00:");
@@ -208,7 +206,7 @@ namespace Oppimispäiväkirja
         }
         public static void EditPropertySource(Topic aihe)
         {
-            string e_source = "";
+            string e_source;
             Console.Clear();
             Console.WriteLine($"Lähde nyt: {aihe.Source}");
             Console.WriteLine("Uusi lähde:");

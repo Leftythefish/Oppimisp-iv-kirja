@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 
 namespace Oppimispäiväkirja
@@ -95,10 +94,6 @@ namespace Oppimispäiväkirja
 
         #region constructors
         public Topic()
-        {
-            id = ++nextId;
-        }
-        public Topic(IEnumerable<Topic> select)
         {
             id = ++nextId;
         }

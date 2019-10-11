@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace Oppimispäiväkirja
 {
@@ -10,7 +7,7 @@ namespace Oppimispäiväkirja
 
         public static List<Topic> Topicbox = new List<Topic>();
 
-        static void Main(string[] args)
+        private static void Main()
         {
             FileManager filu = new FileManager();
             FileManager.LoadAllTopics(filu);

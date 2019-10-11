@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 
 namespace Oppimispäiväkirja
 {
     class FileManager
     {
-        static List<string> tallennustiedosto = new List<string>();
+        static readonly List<string> tallennustiedosto = new List<string>();
 
-        public static void LoadAllTopics(FileManager _file)
+        public static void LoadAllTopics(FileManager _)
         {
             try
             {
