@@ -1,0 +1,13 @@
+﻿body {
+    color: white;
+    background-color: #292828;
+    font-family: Lato, Calibri;
+}
+input {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #313030;
+    color: #7cd4fe;
+}

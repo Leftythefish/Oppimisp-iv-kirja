@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oppimispäiväkirja", "Oppimispäiväkirja\Oppimispäiväkirja.csproj", "{6D6DBC87-E6C9-4A32-BD0A-5CDC9C6A0328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oppimispäiväkirja", "Oppimispäiväkirja\Oppimispäiväkirja.csproj", "{6D6DBC87-E6C9-4A32-BD0A-5CDC9C6A0328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oppimispäiväkirja_TEST", "Oppimispäiväkirja_TEST\Oppimispäiväkirja_TEST.csproj", "{76E6D4EF-4FDD-4FB4-8A8D-FFDE395ED31A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6D6DBC87-E6C9-4A32-BD0A-5CDC9C6A0328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D6DBC87-E6C9-4A32-BD0A-5CDC9C6A0328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D6DBC87-E6C9-4A32-BD0A-5CDC9C6A0328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76E6D4EF-4FDD-4FB4-8A8D-FFDE395ED31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E6D4EF-4FDD-4FB4-8A8D-FFDE395ED31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E6D4EF-4FDD-4FB4-8A8D-FFDE395ED31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E6D4EF-4FDD-4FB4-8A8D-FFDE395ED31A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

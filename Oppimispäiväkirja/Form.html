@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lisää Aiheita</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+    <div id="content">
+        <div id="form">
+            <form>
+                <table>
+                    <tr><td>Name</td>
+                    <td><input type="text" name="topicname" ></td></tr>
+                    <tr><td>Description</td>
+                    <td><textarea name="description"></textarea></td></tr>
+                    <tr><td>Time-estimate</td>
+                    <td><input type="time" name="time_estimate"></td></tr>
+                    <tr><td>Time-spent</td>
+                    <td><input type="time" name="time_spent"></td></tr>
+                    <tr><td>Sources</td>
+                    <td><input type="text" name="source"></td></tr>
+                    <tr><td>Start date</td>
+                    <td><input type="datetime-local" name="startdate"></td></tr>
+                    <tr><td>Completion date</td>
+                    <td><input type="datetime-local" name="completiondate"></td></tr>
+                    <tr><td>Status</td>
+                    <td><select name="status">
+                    <option value="true" selected>Kesken</option>
+                     <option value="false">Valmis</option></select>
+                    </td></tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
