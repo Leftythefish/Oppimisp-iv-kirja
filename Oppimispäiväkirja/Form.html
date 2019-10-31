@@ -6,34 +6,44 @@
     <title>Lisää Aiheita</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="StyleSheet1.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="Topic.js"></script>
 </head>
 <body>
     <div id="content">
+        
         <div id="form">
+            <h1>Add a new topic:</h1><input type="button" class="debug" value="&#9829" id="debug" onclick="lisaavakio();">
             <form>
-                <table>
-                    <tr><td>Name</td>
-                    <td><input type="text" name="topicname" ></td></tr>
-                    <tr><td>Description</td>
-                    <td><textarea name="description"></textarea></td></tr>
-                    <tr><td>Time-estimate</td>
-                    <td><input type="time" name="time_estimate"></td></tr>
-                    <tr><td>Time-spent</td>
-                    <td><input type="time" name="time_spent"></td></tr>
-                    <tr><td>Sources</td>
-                    <td><input type="text" name="source"></td></tr>
-                    <tr><td>Start date</td>
-                    <td><input type="datetime-local" name="startdate"></td></tr>
-                    <tr><td>Completion date</td>
-                    <td><input type="datetime-local" name="completiondate"></td></tr>
-                    <tr><td>Status</td>
-                    <td><select name="status">
-                    <option value="true" selected>Kesken</option>
-                     <option value="false">Valmis</option></select>
-                    </td></tr>
-
+                <table border="0">
+                    <tr><td colspan="2"><p>Name</p><input type="text" name="topicname" id="name"></td></tr>
+                    <tr><td colspan="2"><p>Description</p><textarea name="description" id="desc"></textarea></td></tr>
+                    <tr><td><p>Time-estimate</p></td><td><p>Time-spent</p></td></tr>
+                    <tr>
+                        <td><input type="time" name="time_estimate" id="time_est"></td>
+                        <td><input type="time" name="time_spent" id="time_spent"></td>
+                    </tr>
+                    <tr><td colspan="2"><p> Sources</p><input type="text" name="source" id="source"></td></tr>
+                    <tr><td> <p>Start date</p><input type="date" name="startdate" id="start"></td>
+                    <td> <p>Completion date</p><input type="date" name="completiondate" id="end"></td></tr>
+                    <tr>
+                        <td>
+                            <p>Status</p>
+                            <select name="status" id="status">
+                                <option value="true" selected>Kesken</option>
+                                <option value="false">Valmis</option>
+                            </select>
+                        </td>
+                        <td><p>&nbsp;</p><input type="button" value="Tallenna" id="button" onclick="luo();"></td>
+                    </tr>
                 </table>
             </form>
+        </div>
+        <div id="result">
+            <table border="0" id="lista">
+                
+            </table>
+            <input type="button" value="Load" id="load" onclick="lataa();"><input type="button" value="Store" id="load" onclick="tallenna();">
         </div>
     </div>
 </body>
