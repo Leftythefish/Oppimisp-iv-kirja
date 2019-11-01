@@ -8,12 +8,14 @@ namespace Oppimispäiväkirja
         {
             Console.Clear();
             Console.WriteLine("VALITSE");
-            Console.WriteLine("[1]\t Lisää aihe \n[2]\t Listaa aiheet\n[3]\t Muokkaa aihetta\n[4]\t Tallenna sessio\n ");
+            Console.WriteLine("[1]\t Lisää aihe \n[2]\t Listaa aiheet\n[3]\t Muokkaa aihetta\n[4]\t Tallenna sessio\n[5]\t PäivitäSQL\n ");
             var input = Console.ReadKey();
             if (input.Key == ConsoleKey.D1) { TopicHandler.AddNewTopic(); }
             else if (input.Key == ConsoleKey.D2) { TopicHandler.ListAllTopics(); }
             else if (input.Key == ConsoleKey.D3) { TopicHandler.FindTopicToModify(); }
             else if (input.Key == ConsoleKey.D4) { FileManager.SaveCurrentTopics(); }
+            else if (input.Key == ConsoleKey.D5) { SQLMethods.AddToServer(); }
+
             else
             {
                 Console.Clear();

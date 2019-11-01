@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 namespace Oppimispäiväkirja
 {
-    class Topic
+    public class Topic
     {
         #region fields and properties
         //Id int Tähän talletetaan kyseisen aiheen tunniste
         private readonly int id;
-        private static int nextId = 1000;
+        private static int nextId = 1;
 
         public int ID { get { return id; } }
 
@@ -77,16 +77,19 @@ namespace Oppimispäiväkirja
         public Topic()
         {
             id = ++nextId;
+            this.StartLearningDate = DateTime.Now;
+            this.CompletionDate = DateTime.Now; 
+            this.Description = "default";
+            this.TimeEstimate = 00.00d;
+            this.TimeSpent = 00.00d;
+            this.Source = "whatever";
+            this.InProgress = true;
         }
-        public Topic(string title)
+        public Topic(string title) : this()
         {
-            id = ++nextId;
             this.Title = title;
         }
-        public Topic(string title, string description) : this(title)
-        {
-            this.Description = description;
-        }
+
         public Topic(string title, string description, double timeestimate, double timespent, string source, DateTime startdate, DateTime end_date, bool inprogress) : this(title)
         {
             this.Title = title;

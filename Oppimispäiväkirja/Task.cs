@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Oppimispäiväkirja
 {
-    class Task
+    public class Task
     {
         //Id int Tähän talletetaan kyseisen aiheen tunniste
         private readonly int id;
@@ -37,7 +37,7 @@ namespace Oppimispäiväkirja
         {
             get { return deadline; }
             set { deadline = value; }
-        }        
+        }
         //Priority enum Kuinka kiireinen kyseinen tehtävä on
         public enum Priority
         {
