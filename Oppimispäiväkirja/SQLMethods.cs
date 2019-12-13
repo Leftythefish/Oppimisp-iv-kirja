@@ -17,6 +17,10 @@ namespace Oppimispäiväkirja
             {
                 AddOrUpdate(item);
             }
+            Console.Clear();
+            Console.WriteLine("Tietokanta päivitetty");
+            Console.ReadLine();
+            ConsoleUI.Start();
         }
         public static void GetList() 
         {

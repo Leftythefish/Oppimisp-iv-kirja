@@ -258,7 +258,7 @@ namespace Oppimispäiväkirja
             Console.WriteLine($"Tämänhetkinen alkamispäivä: {aihe.StartLearningDate}");
             try
             {
-                Console.WriteLine("Anna päättymispäivämäärä muodossa: yyyy-mm-dd");
+                Console.WriteLine("Anna alkamispäivämäärä muodossa: yyyy-mm-dd");
                 String inp = Console.ReadLine();
                 aihe.StartLearningDate = DateTime.Parse(inp + " 8:00:00Z");
             }

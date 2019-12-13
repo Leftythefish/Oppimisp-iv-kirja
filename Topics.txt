@@ -1,9 +1,11 @@
-teastiaihe2;testikuvaus 2nen ja katsotaan;0;0;Default tiedostosijainti;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
 testiaihe; ja sitten sen kuvaus;0;0;Default tiedostosijainti;1.1.2019 10.00.00;1.1.2019 10.00.00;Valmis
 lisää  aihe testiin; kuvauskenttätesti;0;0;Default lähde;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
 tämäonmuokattunimi; jotainjotainjotain;0;0;Default lähde;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
 jotainjotain; kuvauskuvaus;0;0;Default lähde;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
-aamuinen aihe; ja sitten pieni kuvaus;1,44;1,44;Default lähde;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
-testiaiheen otsikossa on sanoja;testikuvaus on tässä taas;15,5;15,5;ja tässä on lähdetiedosto;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
+aamuinen aihe; ja sitten pieni kuvaus;1;1;Default lähde;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
+testiaiheen otsikossa on sanoja;testikuvaus on tässä taas;15;15;ja tässä on lähdetiedosto;1.1.2019 10.00.00;1.1.2019 10.00.00;Kesken
 TESTIAIHE;defaultkuvaus;0;0;Default lähde;10.10.2019 11.00.00;28.11.2019 10.00.00;Valmis
-TESTIAIHE 0007;defaultkuvaus;33,33;33,33;Default lähde;6.6.1990 11.00.00;6.6.1990 11.00.00;Valmis
+TESTIAIHE 0007;defaultkuvaus;33;33;Default lähde;6.6.1990 11.00.00;6.6.1990 11.00.00;Valmis
+sqltesti;default;0;0;whatever;1.11.2019 8.17.15;1.11.2019 8.17.15;Kesken
+sqltesti;default;0;0;whatever;1.11.2019 8.17.15;1.11.2019 8.17.15;Kesken
+vieläkötoimii;default;0;0;history;12.12.2019 10.00.00;13.12.2019 8.23.34;Valmis
